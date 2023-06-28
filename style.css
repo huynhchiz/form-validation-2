@@ -9,8 +9,8 @@ html {
 }
 
 .app {
+    margin-top: 40px;
     display: flex;
-    height: 600px;
 }
 
 .div__sign-up {
