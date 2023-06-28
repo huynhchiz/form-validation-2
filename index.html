@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- FORM SIGN UP -->
+        <div class="div__sign-up">
+            <form action="" method="post" class="form__sign-up">
+                <header class="form-sign-up__header">
+                    ĐĂNG KÝ
+                </header>
+                <div class="form-sign-up__main">
+
+                    <div class="sign-up-main__input-group">
+                        <label class="sign-up__input-title" for="name">Họ và tên:</label>
+                        <input type="text" name="name" class="sign-up__input-bar sign-up__input-name"
+                            placeholder="Họ và tên" autocomplete="on" rules="isRequired">
+                        <div class="sign-up__warning-div">Vui lòng nhập họ tên đầy đủ!</div>
+                    </div>
+
+                    <div class="sign-up-main__input-group">
+                        <label class="sign-up__input-title" for="phone">Số điện thoại:</label>
+                        <input type="number" name="phone" class="sign-up__input-bar sign-up__input-phone"
+                            placeholder="Số điện thoại" autocomplete="on" rules="isRequired">
+                        <div class="sign-up__warning-div"></div>
+                    </div>
+
+                    <div class="sign-up-main__input-group">
+                        <label class="sign-up__input-title" for="email">Email:</label>
+                        <input type="email" name="email" class="sign-up__input-bar sign-up__input-email"
+                            placeholder="Email" autocomplete="on" rules="isRequired|isEmail">
+                        <div class="sign-up__warning-div"></div>
+                    </div>
+
+                    <div class="sign-up-main__input-group">
+                        <label class="sign-up__input-title" for="username">Tài khoản:</label>
+                        <input type="text" name="username" class="sign-up__input-bar sign-up__input-username"
+                            placeholder="Tài khoản" autocomplete="on" rules="isRequired">
+                        <div class="sign-up__warning-div"></div>
+                    </div>
+
+                    <div class="sign-up-main__input-group">
+                        <label class="sign-up__input-title" for="password">Mật khẩu:</label>
+                        <input type="password" name="password" class="sign-up__input-bar sign-up__input-password"
+                            placeholder="Mật khẩu" autocomplete="on" rules="isRequired|min:6">
+                        <div class="sign-up__warning-div"></div>
+                    </div>
+
+                    <div class="sign-up-main__input-group">
+                        <label class="sign-up__input-title" for="passwordconfirm">Nhập lại mật khẩu:</label>
+                        <input type="password" name="passwordconfirm" class="sign-up__input-bar sign-up__input-passwordconfirm"
+                            placeholder="Nhập lại mật khẩu" autocomplete="on" rules="isRequired|isConfirmed">
+                        <div class="sign-up__warning-div"></div>
+                    </div>
+
+                    <div class="sign-up-main__input-group">
+                        <label class="sign-up__input-title" for="province">Địa chỉ:</label>
+                        <select name="province" class="sign-up__input-bar sign-up__input-province" rules="isRequired">
+                            <option value="">-- Chọn Tỉnh / TP --</option>
+                            <option value="hni">Hà Nội</option>
+                            <option value="hcmh">TP Hồ Chí Minh</option>
+                            <option value="bdg">Bình Dương</option>
+                            <option value="dni">Đồng Nai</option>
+                            <option value="dng">Đà Nẵng</option>
+                        </select>
+                        <div class="sign-up__warning-div"></div>
+                    </div>
+
+                    <div class="sign-up-main__input-group">
+                        <label class="sign-up__input-title" for="gender">Giới tính:</label>
+                        <input type="radio" name="gender" value="male" class="sign-up__input-gender sign-up__input-passwordconfirm"> Nam
+                        <input type="radio" name="gender" value="female" class="sign-up__input-gender sign-up__input-passwordconfirm"> Nữ
+                        <input type="radio" name="gender" value="others" class="sign-up__input-gender sign-up__input-passwordconfirm"> Khác
+                        <div class="sign-up__warning-div"></div>
+                    </div>
+
+                    <div class="sign-up-main__input-group">
+                        <label class="sign-up__input-title" for="name">Sở thích:</label>
+                        <input type="checkbox" name="hobby" rules="isRequired" value="aaa" class="sign-up__input-hobby sign-up__input-passwordconfirm"> aaa
+                        <input type="checkbox" name="hobby" rules="isRequired" value="bbb" class="sign-up__input-hobby sign-up__input-passwordconfirm"> bbb
+                        <input type="checkbox" name="hobby" rules="isRequired" value="ccc" class="sign-up__input-hobby sign-up__input-passwordconfirm"> ccc
+                        <input type="checkbox" name="hobby" rules="isRequired" value="ddd" class="sign-up__input-hobby sign-up__input-passwordconfirm"> ddd
+                        <input type="checkbox" name="hobby" rules="isRequired" value="eee" class="sign-up__input-hobby sign-up__input-passwordconfirm"> eee
+                        <input type="checkbox" name="hobby" rules="isRequired" value="fff" class="sign-up__input-hobby sign-up__input-passwordconfirm"> fff
+                        <div class="sign-up__warning-div"></div>
+                    </div>
+                    
+                    <div class="sign-up-main__input-group">
+                        <label class="sign-up__input-title" for="name">Chọn ảnh:</label>
+                        <input type="file" name="avatar" class="sign-up__input-bar sign-up__input-avatar"
+                        rules="isRequired">
+                        <div class="sign-up__warning-div"></div>
+                    </div>
+
+                    <button class="sign-up__submit">
+                        ĐĂNG KÝ
+                    </button>
+                </div>
+                <footer class="form-sign-up__footer">
+                    Made by Chí
+                </footer>
+            </form>
+        </div>
+
+    </div>
+    
+    <script src="./validator.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>
